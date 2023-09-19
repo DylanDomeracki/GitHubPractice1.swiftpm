@@ -2,11 +2,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        var array = ["Mow the Lawn", "Feed the Dog", "Grocery Shopping"]
+        List{
+            ForEach(0 ..< array.count, id: \.self) {value in
+                Text(array[value])
+            }
         }
     }
 }
